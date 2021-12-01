@@ -23,6 +23,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/playerone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -51,6 +52,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/playertwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -95,144 +97,151 @@
             android:padding="10dp">
 
             <ImageView
+                android:id="@+id/image1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
                 android:adjustViewBounds="true"
-                android:src="@drawable/o"
                 android:background="@drawable/round_back_blue_border"
                 android:padding="20dp"
-                tools:ignore="NestedWeights"
-                android:layout_marginRight="5dp" />
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/x"
-                android:background="@drawable/round_back_blue_border"
-                android:padding="20dp"
-                tools:ignore="NestedWeights"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp" />
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="5dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/o"
-                android:background="@drawable/round_back_blue_border"
-                android:padding="20dp"
-                tools:ignore="NestedWeights"
-                android:layout_marginLeft="10dp"/>
-
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginEnd="5dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/x"
-                android:background="@drawable/round_back_blue_border"
-                android:padding="20dp"
-                tools:ignore="NestedWeights"
-                android:layout_marginRight="5dp" />
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/o"
-                android:background="@drawable/round_back_blue_border"
-                android:padding="20dp"
-                tools:ignore="NestedWeights"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp" />
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginStart="5dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/x"
-                android:background="@drawable/round_back_blue_border"
-                android:padding="20dp"
-                tools:ignore="NestedWeights"
-                android:layout_marginLeft="10dp" />
-
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginEnd="5dp"
-                android:adjustViewBounds="true"
                 android:src="@drawable/transparent"
-                android:background="@drawable/round_back_blue_border"
-                android:padding="20dp"
-                tools:ignore="NestedWeights"
-                android:layout_marginRight="5dp" />
+                tools:ignore="NestedWeights" />
 
             <ImageView
+                android:id="@+id/image2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/x"
-                android:background="@drawable/round_back_blue_border"
-                android:padding="20dp"
-                tools:ignore="NestedWeights"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp" />
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:layout_marginStart="5dp"
                 android:adjustViewBounds="true"
-                android:src="@drawable/o"
                 android:background="@drawable/round_back_blue_border"
                 android:padding="20dp"
-                tools:ignore="NestedWeights"
-                android:layout_marginLeft="10dp" />
+                android:src="@drawable/transparent"
+                tools:ignore="NestedWeights" />
+
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/round_back_blue_border"
+                android:padding="20dp"
+                android:src="@drawable/transparent"
+                tools:ignore="NestedWeights" />
 
 
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/round_back_blue_border"
+                android:padding="20dp"
+                android:src="@drawable/transparent"
+                tools:ignore="NestedWeights" />
+
+            <ImageView
+                android:id="@+id/image5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/round_back_blue_border"
+                android:padding="20dp"
+                android:src="@drawable/transparent"
+                tools:ignore="NestedWeights" />
+
+            <ImageView
+                android:id="@+id/image6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/round_back_blue_border"
+                android:padding="20dp"
+                android:src="@drawable/transparent"
+                tools:ignore="NestedWeights" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/image7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/round_back_blue_border"
+                android:padding="20dp"
+                android:src="@drawable/transparent"
+                tools:ignore="NestedWeights" />
+
+            <ImageView
+                android:id="@+id/image8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/round_back_blue_border"
+                android:padding="20dp"
+                android:src="@drawable/transparent"
+                tools:ignore="NestedWeights" />
+
+            <ImageView
+                android:id="@+id/image9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@drawable/round_back_blue_border"
+                android:padding="20dp"
+                android:src="@drawable/transparent"
+                tools:ignore="NestedWeights" />
 
         </LinearLayout>
 
