@@ -75,155 +75,164 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/container"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="50dp"
-        android:background="@drawable/round_back_purple"
-        android:gravity="center"
+        android:layout_marginTop="50dp"
         android:orientation="vertical"
-        android:paddingTop="30dp">
+        android:background="@drawable/round_back_purple"
+        android:gravity="center">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="0dp"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
-            <LinearLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/o"
                 android:background="@drawable/round_back_blue_border"
-                android:gravity="center">
+                android:padding="20dp"
+                tools:ignore="NestedWeights"
+                android:layout_marginRight="5dp" />
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/x" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="10dp"
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/x"
+                android:background="@drawable/round_back_blue_border"
+                android:padding="20dp"
+                tools:ignore="NestedWeights"
                 android:layout_marginLeft="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginRight="5dp" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/o"
                 android:background="@drawable/round_back_blue_border"
-                android:gravity="center">
+                android:padding="20dp"
+                tools:ignore="NestedWeights"
+                android:layout_marginLeft="10dp"/>
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/x" />
-            </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/round_back_blue_border"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/x" />
-            </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="0dp"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
-            <LinearLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/x"
                 android:background="@drawable/round_back_blue_border"
-                android:gravity="center">
+                android:padding="20dp"
+                tools:ignore="NestedWeights"
+                android:layout_marginRight="5dp" />
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/x" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="10dp"
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/o"
+                android:background="@drawable/round_back_blue_border"
+                android:padding="20dp"
+                tools:ignore="NestedWeights"
                 android:layout_marginLeft="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginRight="5dp" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/x"
                 android:background="@drawable/round_back_blue_border"
-                android:gravity="center">
+                android:padding="20dp"
+                tools:ignore="NestedWeights"
+                android:layout_marginLeft="10dp" />
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/x" />
-            </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/round_back_blue_border"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/x" />
-            </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="0dp"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
-            <LinearLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/transparent"
                 android:background="@drawable/round_back_blue_border"
-                android:gravity="center">
+                android:padding="20dp"
+                tools:ignore="NestedWeights"
+                android:layout_marginRight="5dp" />
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/x" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="10dp"
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/x"
+                android:background="@drawable/round_back_blue_border"
+                android:padding="20dp"
+                tools:ignore="NestedWeights"
                 android:layout_marginLeft="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginRight="5dp" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/o"
                 android:background="@drawable/round_back_blue_border"
-                android:gravity="center">
+                android:padding="20dp"
+                tools:ignore="NestedWeights"
+                android:layout_marginLeft="10dp" />
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/x" />
-            </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@drawable/round_back_blue_border"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/x" />
-            </LinearLayout>
 
         </LinearLayout>
 

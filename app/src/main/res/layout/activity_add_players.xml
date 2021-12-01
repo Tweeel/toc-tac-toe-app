@@ -45,6 +45,7 @@ android:orientation="vertical">
             android:layout_marginEnd="20dp"
             android:background="@color/dark_blue"
             android:hint="Player One"
+            android:inputType="textPersonName"
             android:minHeight="48dp"
             android:textColor="#FFFFFF"
             android:textColorHint="@color/light_white" />
@@ -78,6 +79,7 @@ android:orientation="vertical">
             android:layout_marginEnd="20dp"
             android:background="@color/dark_blue"
             android:hint="Player Two"
+            android:inputType="textPersonName"
             android:minHeight="48dp"
             android:textColor="#FFFFFF"
             android:textColorHint="@color/light_white" />
@@ -93,7 +95,6 @@ android:orientation="vertical">
         android:layout_marginTop="40dp"
         android:text="Start Game"
         android:textColor="#FFFFFFFF"
-        android:background="@drawable/rounded_back_blue1000"
-        android:onClick="startgame"/>
+        android:background="@drawable/rounded_back_blue1000"/>
 
 </LinearLayout>
