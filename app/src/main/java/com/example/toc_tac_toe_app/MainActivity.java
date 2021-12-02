@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -32,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
 
         playerOne= findViewById(R.id.playerone);
         PlayerTwo= findViewById(R.id.playertwo);
-        Intent intent = getIntent();
-        String name1 = intent.getStringExtra("PlayerOne");
-        playerOne.setText(name1);
-        String name2 = intent.getStringExtra("PlayerTwo");
-        PlayerTwo.setText(name2);
+//        Intent intent = getIntent();
+//        String name1 = intent.getStringExtra("PlayerOne");
+//        playerOne.setText(name1);
+//        String name2 = intent.getStringExtra("PlayerTwo");
+//        PlayerTwo.setText(name2);
 
         image1=findViewById(R.id.image1);
         image2=findViewById(R.id.image2);
@@ -80,8 +81,7 @@ public class MainActivity extends AppCompatActivity {
         winning.add(cross1);
         winning.add(cross2);
 
-        for(List l: winning)
-            if(player.containsAll(l)) return true;
+        for(List l: winning) if (player.containsAll(l)) return true;
 
         return false;
     }
@@ -93,58 +93,87 @@ public class MainActivity extends AppCompatActivity {
 
     void onclick(int position,ImageView image){
         if(turn==0){
+            Log.d("info","\n");
             if(check_full(position)){
                 image.setImageResource(R.drawable.x);
+                Log.d("info","image added");
                 player1.add(position);
+                Log.d("info", "player 1 : " +String.valueOf(player1));
+                Log.d("info","position added");
                 turn=1;
+                Log.d("info","turn changed");
                 places_taken++;
+                Log.d("info","increment the places taken");
                 full.add(position);
-                if(places_taken==9)
-                    if(!check_winner(player1)) {
-                        WinDialog winDialog = new WinDialog(MainActivity.this,"Draw!!",MainActivity.this);
+                Log.d("info", "full : " +String.valueOf(full));
+                Log.d("info","add the position to list");
+                if(places_taken==9) {
+                    Log.d("info","places are full");
+                    if (!check_winner(player1)) {
+                        Log.d("info","draw!");
+                        WinDialog winDialog = new WinDialog(MainActivity.this, "Draw!!", MainActivity.this);
                         winDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         winDialog.setCancelable(false);
                         winDialog.show();
-                    }else{
-                        WinDialog winDialog = new WinDialog(MainActivity.this,playerOne.getText().toString()+" is the winner !",MainActivity.this);
+                    } else {
+                        Log.d("info","player 1 win!");
+                        WinDialog winDialog = new WinDialog(MainActivity.this, playerOne.getText().toString() + " is the winner !", MainActivity.this);
                         winDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         winDialog.setCancelable(false);
                         winDialog.show();
                     }
-                else
+                }else{
+                    Log.d("info","there is more places");
                     if(check_winner(player1)){
+                        Log.d("info","player win!");
                         WinDialog winDialog = new WinDialog(MainActivity.this,playerOne.getText().toString()+" is the winner !",MainActivity.this);
                         winDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         winDialog.setCancelable(false);
                         winDialog.show();
-                    }
+                    }else Log.d("info","keep playing!");
+                }
             }
         }else{
+            Log.d("info","\n");
             if(check_full(1)){
                 image.setImageResource(R.drawable.o);
+                Log.d("info","image added!");
                 player2.add(position);
+                Log.d("info","position added!");
+                Log.d("info", "player2 : " +String.valueOf(player2));
                 turn=0;
+                Log.d("info","turn changed");
                 places_taken++;
+                Log.d("info","increment the places taken");
                 full.add(position);
-                if(places_taken==9)
-                    if(!check_winner(player2)) {
-                        WinDialog winDialog = new WinDialog(MainActivity.this,"Draw!!",MainActivity.this);
+                Log.d("info", "full : " +String.valueOf(full));
+                Log.d("info","add the position to list");
+                if(places_taken==9) {
+                    Log.d("info","places are full");
+                    if (!check_winner(player2)) {
+                        Log.d("info","draw!");
+                        WinDialog winDialog = new WinDialog(MainActivity.this, "Draw!!", MainActivity.this);
                         winDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         winDialog.setCancelable(false);
                         winDialog.show();
-                    }else{
-                        WinDialog winDialog = new WinDialog(MainActivity.this,PlayerTwo.getText().toString()+" is the winner !",MainActivity.this);
+                    } else {
+                        Log.d("info","player 1 win!");
+                        WinDialog winDialog = new WinDialog(MainActivity.this, PlayerTwo.getText().toString() + " is the winner !", MainActivity.this);
                         winDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         winDialog.setCancelable(false);
                         winDialog.show();
                     }
-                else
-                    if(check_winner(player2)){
-                        WinDialog winDialog = new WinDialog(MainActivity.this,PlayerTwo.getText().toString()+" is the winner !",MainActivity.this);
+                }else {
+                    Log.d("info","there is more places");
+                    if (check_winner(player2)) {
+                        Log.d("info","player win!");
+                        WinDialog winDialog = new WinDialog(MainActivity.this, PlayerTwo.getText().toString() + " is the winner !", MainActivity.this);
                         winDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         winDialog.setCancelable(false);
                         winDialog.show();
-                    }
+                    }else Log.d("info","keep playing!");
+
+            }
             }
         }
     }

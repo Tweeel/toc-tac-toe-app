@@ -3,7 +3,6 @@ package com.example.toc_tac_toe_app;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -31,13 +30,9 @@ public class WinDialog extends Dialog {
 
         messageTxt.setText(message);
 
-        startAgainBtn.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                mainActivity.restart_match();
-                dismiss();
-            }
+        startAgainBtn.setOnClickListener(v -> {
+            mainActivity.restart_match();
+            dismiss();
         });
     }
 }
