@@ -33,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
 
         playerOne= findViewById(R.id.playerone);
         PlayerTwo= findViewById(R.id.playertwo);
-//        Intent intent = getIntent();
-//        String name1 = intent.getStringExtra("PlayerOne");
-//        playerOne.setText(name1);
-//        String name2 = intent.getStringExtra("PlayerTwo");
-//        PlayerTwo.setText(name2);
+        Intent intent = getIntent();
+        String name1 = intent.getStringExtra("PlayerOne");
+        playerOne.setText(name1);
+        String name2 = intent.getStringExtra("PlayerTwo");
+        PlayerTwo.setText(name2);
 
         image1=findViewById(R.id.image1);
         image2=findViewById(R.id.image2);
