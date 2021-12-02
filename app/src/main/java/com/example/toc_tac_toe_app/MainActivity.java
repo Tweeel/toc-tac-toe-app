@@ -1,10 +1,11 @@
 package com.example.toc_tac_toe_app;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -99,13 +100,24 @@ public class MainActivity extends AppCompatActivity {
                 places_taken++;
                 full.add(position);
                 if(places_taken==9)
-                    if(!check_winner(player1))
-                        Toast.makeText(MainActivity.this , "DRAW" , Toast.LENGTH_SHORT).show();
-                    else
-                        Toast.makeText(MainActivity.this , "Player1 Win" , Toast.LENGTH_SHORT).show();
+                    if(!check_winner(player1)) {
+                        WinDialog winDialog = new WinDialog(MainActivity.this,"Draw!!",MainActivity.this);
+                        winDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                        winDialog.setCancelable(false);
+                        winDialog.show();
+                    }else{
+                        WinDialog winDialog = new WinDialog(MainActivity.this,playerOne.getText().toString()+" is the winner !",MainActivity.this);
+                        winDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                        winDialog.setCancelable(false);
+                        winDialog.show();
+                    }
                 else
-                    if(check_winner(player1))
-                        Toast.makeText(MainActivity.this , "Player1 Win" , Toast.LENGTH_SHORT).show();
+                    if(check_winner(player1)){
+                        WinDialog winDialog = new WinDialog(MainActivity.this,playerOne.getText().toString()+" is the winner !",MainActivity.this);
+                        winDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                        winDialog.setCancelable(false);
+                        winDialog.show();
+                    }
             }
         }else{
             if(check_full(1)){
@@ -115,15 +127,45 @@ public class MainActivity extends AppCompatActivity {
                 places_taken++;
                 full.add(position);
                 if(places_taken==9)
-                    if(!check_winner(player2))
-                        Toast.makeText(MainActivity.this , "DRAW" , Toast.LENGTH_SHORT).show();
-                    else
-                        Toast.makeText(MainActivity.this , "Player2 Win" , Toast.LENGTH_SHORT).show();
+                    if(!check_winner(player2)) {
+                        WinDialog winDialog = new WinDialog(MainActivity.this,"Draw!!",MainActivity.this);
+                        winDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                        winDialog.setCancelable(false);
+                        winDialog.show();
+                    }else{
+                        WinDialog winDialog = new WinDialog(MainActivity.this,PlayerTwo.getText().toString()+" is the winner !",MainActivity.this);
+                        winDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                        winDialog.setCancelable(false);
+                        winDialog.show();
+                    }
                 else
-                    if(check_winner(player2))
-                        Toast.makeText(MainActivity.this , "Player2 Win" , Toast.LENGTH_SHORT).show();
+                    if(check_winner(player2)){
+                        WinDialog winDialog = new WinDialog(MainActivity.this,PlayerTwo.getText().toString()+" is the winner !",MainActivity.this);
+                        winDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                        winDialog.setCancelable(false);
+                        winDialog.show();
+                    }
             }
         }
+    }
+
+    public void restart_match(){
+        image1.setImageResource(R.drawable.transparent);
+        image2.setImageResource(R.drawable.transparent);
+        image3.setImageResource(R.drawable.transparent);
+        image4.setImageResource(R.drawable.transparent);
+        image5.setImageResource(R.drawable.transparent);
+        image6.setImageResource(R.drawable.transparent);
+        image7.setImageResource(R.drawable.transparent);
+        image8.setImageResource(R.drawable.transparent);
+        image9.setImageResource(R.drawable.transparent);
+
+        turn =0;
+        places_taken=0;
+
+        player1.clear();
+        player2.clear();
+        full.clear();
     }
 
 }
