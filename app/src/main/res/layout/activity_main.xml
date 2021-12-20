@@ -94,12 +94,25 @@
             android:orientation="horizontal"
             android:padding="10dp">
 
+<!--            <ImageView-->
+<!--                android:id="@+id/image1"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginRight="5dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:adjustViewBounds="true"-->
+<!--                android:background="@drawable/round_back_blue_border"-->
+<!--                android:padding="20dp"-->
+<!--                android:src="@drawable/transparent"-->
+<!--                tools:ignore="NestedWeights" />-->
+
             <ImageView
                 android:id="@+id/image1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:background="@drawable/round_back_blue_border"
@@ -238,6 +251,7 @@
                 android:padding="20dp"
                 android:src="@drawable/transparent"
                 tools:ignore="NestedWeights" />
+
 
         </LinearLayout>
 
