@@ -6,6 +6,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView playerOne, PlayerTwo;
     ImageView image1, image2, image3, image4, image5, image6, image7, image8, image9;
+    LinearLayout player1_corners, player2_corners;
 
     List<Integer> player1 = new ArrayList<>();
     List<Integer> player2 = new ArrayList<>();
@@ -38,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
         playerOne.setText(name1);
         String name2 = intent.getStringExtra("PlayerTwo");
         PlayerTwo.setText(name2);
+
+        player1_corners = findViewById(R.id.player1_corners);
+        player2_corners = findViewById(R.id.player2_corners);
+        player1_corners.setBackgroundResource(R.drawable.round_back_red);
+        player2_corners.setBackgroundResource(R.drawable.round_back_blue_border);
 
         image1 = findViewById(R.id.image1);
         image2 = findViewById(R.id.image2);
@@ -104,6 +111,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("info", "player 1 : " + String.valueOf(player1));
                 Log.d("info", "position added");
                 turn = 1;
+                player2_corners.setBackgroundResource(R.drawable.round_back_blue);
+                player1_corners.setBackgroundResource(R.drawable.round_back_blue_border);
                 Log.d("info", "turn changed");
                 places_taken++;
                 Log.d("info", "increment the places taken");
@@ -147,6 +156,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("info", "position added!");
                 Log.d("info", "player2 : " + String.valueOf(player2));
                 turn = 0;
+                player1_corners.setBackgroundResource(R.drawable.round_back_red);
+                player2_corners.setBackgroundResource(R.drawable.round_back_blue_border);
                 Log.d("info", "turn changed");
                 places_taken++;
                 Log.d("info", "increment the places taken");
@@ -193,6 +204,9 @@ public class MainActivity extends AppCompatActivity {
         image7.setImageResource(R.drawable.transparent);
         image8.setImageResource(R.drawable.transparent);
         image9.setImageResource(R.drawable.transparent);
+
+        player1_corners.setBackgroundResource(R.drawable.round_back_red);
+        player2_corners.setBackgroundResource(R.drawable.round_back_blue_border);
 
         turn = 0;
         places_taken = 0;

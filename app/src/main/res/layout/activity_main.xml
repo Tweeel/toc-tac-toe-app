@@ -16,59 +16,73 @@
         android:paddingTop="30dp">
 
         <LinearLayout
+            android:id="@+id/player1_corners"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/round_back_blue_border"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/playerone"
+            android:background="@drawable/round_back_purple"
+            android:padding="5dp">
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_back_blue_border"
                 android:gravity="center"
-                android:text="Player One"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:src="@drawable/x" />
+                <TextView
+                    android:id="@+id/playerone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Player One"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/x" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/player2_corners"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
             android:background="@drawable/round_back_blue_border"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/playertwo"
+            android:padding="5dp">
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_back_blue_border"
                 android:gravity="center"
-                android:text="Player Two"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:src="@drawable/o" />
+                <TextView
+                    android:id="@+id/playertwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Player Two"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/o" />
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
@@ -94,18 +108,6 @@
             android:orientation="horizontal"
             android:padding="10dp">
 
-<!--            <ImageView-->
-<!--                android:id="@+id/image1"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginEnd="5dp"-->
-<!--                android:layout_marginRight="5dp"-->
-<!--                android:layout_weight="1"-->
-<!--                android:adjustViewBounds="true"-->
-<!--                android:background="@drawable/round_back_blue_border"-->
-<!--                android:padding="20dp"-->
-<!--                android:src="@drawable/transparent"-->
-<!--                tools:ignore="NestedWeights" />-->
 
             <ImageView
                 android:id="@+id/image1"
